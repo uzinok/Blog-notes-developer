@@ -1,10 +1,19 @@
 header
-  h1 header
+  .wrap
 
-  ul
-    li
-      a(href="index.html") page
-    li
-      a(href="category.html") category
-    li
-      a(href="404.html") 404 page
+    a.block-logo(href="#")
+        svg.block-logo__svg(width="60", height="60")
+          use(xlink:href="#logo")
+        span.block-logo__name Записки верстальщика
+
+    nav.nav.nojs
+
+      button.nav-button(aria-label="открыть меню")
+
+      ul.nav__list
+        li.nav__item
+          a(href="index.html") page
+        li.nav__item
+          a(href="category.html") category
+        li.nav__item
+          a(href="404.html") 404 page
