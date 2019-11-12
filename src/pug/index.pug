@@ -1,0 +1,17 @@
+extends templates/template.pug
+
+block variables
+  //- переменная для template.pug
+  - var pageTitle = "page"
+
+
+block main
+
+  include templates/header.pug
+  
+  main
+
+    include templates/aside.pug
+
+  include templates/footer.pug
+  
