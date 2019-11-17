@@ -13,15 +13,19 @@ header {
 }
 
 .nojs {
-  margin-top: 15px;
-  border-top: 1px solid @color-dark;
-  padding-top: 15px;
 
-  @media (min-width: @min-md) {
-    margin: 0;
-    padding: 0;
-    border: none;
+  &.nav {
+    margin-top: 15px;
+    border-top: 1px solid @color-dark;
+    padding-top: 15px;
+
+    @media (min-width: @min-md) {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
   }
+
 
   .nav-button {
     display: none;
@@ -73,5 +77,85 @@ header {
   @media (min-width: @min-md) {
     padding: 10px 20px;
     font-size: 16px;
+  }
+}
+
+.nav-button {
+  display: none;
+
+  @media (max-width: @max-md) {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 44px;
+    height: 34px;
+    border: 1px solid @color-theme;
+    border-radius: 4px;
+    background-color: transparent;
+    box-shadow: none;
+    outline-color: #d29948;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      position: absolute;
+      left: 5px;
+      background-color: #00aeef;
+      transition: @transition;
+    }
+
+    &::before {
+      top: 7px;
+      box-shadow: 0 8px 0 #00aeef;
+    }
+
+    &::after {
+      bottom: 7px;
+    }
+  }
+}
+
+@media (max-width: @max-md) {
+  .nav-close {
+    .nav__list {
+      display: none;
+    }
+
+    &.nojs .nav__list {
+      display: block;
+    }
+  }
+
+  .nav-open {
+    margin-top: 15px;
+    border-top: 1px solid @color-dark;
+    padding-top: 15px;
+
+    .nav__list {
+      display: block;
+    }
+  }
+
+  .nav-open .nav-button {
+
+    &::before,
+    &::after {
+      top: 50%;
+      left: 50%;
+      transform-origin: left;
+    }
+
+    &::before {
+      box-shadow: none;
+      transform: rotate(45deg) translate(-50%, -50%);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(-50%, -50%);
+    }
   }
 }
