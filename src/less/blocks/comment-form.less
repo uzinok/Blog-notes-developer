@@ -1,0 +1,55 @@
+.comments-area {
+  width: 100%;
+  padding: 0 15px 15px;
+  box-sizing: border-box;
+
+  & p {
+    font-size: 16px;
+  }
+
+  & label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.required {
+  color: @color-red;
+  font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+textarea {
+  user-select: none;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: @color-dark;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  border: 1px solid #eee;
+  font-weight: 300;
+  font-family: "Roboto", "Arial", sans-serif;
+  outline: 0;
+  box-shadow: none;
+}
+
+input[type="submit"] {
+  text-align: center;
+  background-color: #00aeef;
+  text-transform: uppercase;
+  border-bottom: 3px solid #0089bc;
+  padding: 10px;
+  color: #fff;
+
+  @media(min-width: @min-sm) {
+    letter-spacing: 5px;
+  }
+}
