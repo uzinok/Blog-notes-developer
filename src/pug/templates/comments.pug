@@ -1,0 +1,42 @@
+.comments-area
+  .comment-respond
+
+    h3.comment-reply-title
+      | Добавить комментарий
+
+    form.comment-form
+      p.comment-notes
+        span
+          | Ваш e-mail не будет опубликован.
+        | Обязательные поля помечены
+        span.required
+          | *
+      
+      p.comment-form-comment
+        label(for="comment")
+          | комментарий
+        textarea#comment(name="comment")
+
+      p.comment-form-author
+        label(for="author")
+          | Имя
+          span.required
+            |  *
+        input#author(type="text")
+
+      p.comment-form-email
+        label(for="email")
+          | Email
+          span.required
+              |  *
+          input#email(type="email")
+
+      p.comment-form-url
+        label(for="url")
+          | Сайт
+          span.required
+              |  *
+          input#url(type="email")
+
+      p.form-submit
+        input(type="submit", class="submit", value="Отправить комментарий")
