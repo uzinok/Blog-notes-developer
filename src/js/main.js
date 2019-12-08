@@ -3,4 +3,6 @@ window.onload = function () {
   noJs ();
   // меню в шапке
   openCloseNav();
+  // загрузка видео с youtube
+  findVideos();
 };
