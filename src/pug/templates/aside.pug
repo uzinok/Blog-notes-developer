@@ -1,2 +1,101 @@
-aside
-  p боковая панель
+aside.wrap.wrap--aside
+  
+  div
+    h2.widgettitle Поиск
+
+    form#searchform.searchform(role="search" method="get" action="#")
+      div
+        label.screen-reader-text(for="s") Найти:
+        input#s(type="text" value="" name="s")
+        input#searchsubmit(type="submit" value="Поиск")
+
+  div
+    h2.widgettitle Календарь
+    div#calendar_wrap.calendar_wrap
+      table#wp-calendar
+        caption Ноябрь 2019
+        thead
+          tr
+            th(scope="col" title="Понедельник") Пн
+            th(scope="col" title="Вторник") Вт
+            th(scope="col" title="Среда") Ср
+            th(scope="col" title="Четверг") Чт
+            th(scope="col" title="Пятница") Пт
+            th(scope="col" title="Суббота") Сб
+            th(scope="col" title="Воскресенье") Вс
+
+          tfoot
+            tr
+              td#pref(colspan="3")
+                a(href="#") « Окт
+              td.pad &nbsp;
+              td#next.pad(colspan="3") &nbsp;
+
+          tbody
+            tr
+              td.pad(colspan="4") &nbsp;
+              td 1
+              td 2
+              td 3
+            
+            tr
+              td 4
+              td 5
+              td 6
+              td 7
+              td 8
+              td 9
+              td 10
+              
+            tr
+              td#today 11
+              td 12
+              td 13
+              td 14
+              td 15
+              td 16
+              td 17
+            
+            tr
+              td 18
+              td 19
+              td 20
+              td 21
+              td 22
+              td 23
+              td 24
+            
+            tr
+              td 25
+              td 26
+              td 27
+              td 28
+              td 29
+              td 30
+              td.pad(colspan="1") &nbsp;
+
+  div
+    h2.widgettitle Последние записи
+    ul
+      li
+        a(href="#") Слайдер-карусель на чистом JavaScript
+      li
+        a(href="#") Поддержка браузера Internet Explorer
+      li
+        a(href="#") Звездное небо на canvas
+      li
+        a(href="#") Анимированный таймер на SVG
+      li
+        a(href="#") Карусель
+
+  div
+    h2.widgettitle Облако меток
+    
+    div.tagcloud
+
+      a.tag-cloud-link.tag-link-16.tag-link-position-1(href="#" style="font-size: 8pt;") canvas
+      a.tag-cloud-link.tag-link-7.tag-link-position-2(href="#" style="font-size: 22pt;") css demo
+      a.tag-cloud-link.tag-link-9.tag-link-position-3(href="#" style="font-size: 8pt;") css прием
+      a.tag-cloud-link.tag-link-13.tag-link-position-4(href="#" style="font-size: 22pt;") demo js
+      a.tag-cloud-link.tag-link-11.tag-link-position-5(href="#" style="font-size: 20pt;") svg demo
+      a.tag-cloud-link.tag-link-8.tag-link-position-6(href="#" style="font-size: 19pt;") анимация CSS
