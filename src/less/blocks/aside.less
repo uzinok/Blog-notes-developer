@@ -5,8 +5,75 @@
     width: 250px;
     flex-shrink: 0;
   }
+
+  & ul {
+    counter-reset: myCounter;
+
+    & li {
+      position: relative;
+      padding: 0 0 5px 1em;
+
+      &::before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .list-rezet
+  }
 }
 
 .screen-reader-text {
   .visually-hidden
+}
+
+.widgettitle {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0 10px;
+  margin: 0 0 15px;
+  font-size: 22px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #404040;
+}
+
+.searchform {
+  & input[type="text"] {
+    margin-bottom: 15px;
+  }
+}
+
+.calendar_wrap {
+
+  & table {
+    width: 100%;
+  }
+
+  & td,
+  & th {
+    padding: 2px 4px;
+    font-size: 18px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+  }
+
+  & td {
+    font-weight: 300;
+  }
+
+  & th {
+    font-weight: 400;
+  }
+}
+
+.tagcloud {
+  & a {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    border-bottom: 1px solid #000;
+    white-space: nowrap;
+    text-decoration: none;
+  }
 }
