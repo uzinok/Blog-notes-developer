@@ -1,6 +1,11 @@
 .wrap--aside {
   display: block;
 
+  &>div {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
   @media (min-width: @min-md) {
     width: 250px;
     flex-shrink: 0;
@@ -37,6 +42,7 @@
   font-size: 22px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #404040;
+  text-align: center;
 }
 
 .searchform {
@@ -60,6 +66,7 @@
 
   & td {
     font-weight: 300;
+    text-align: center;
   }
 
   & th {
