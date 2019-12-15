@@ -73,6 +73,15 @@ header {
   text-decoration: none;
   color: #000;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  transition: @transition;
+
+  &:hover {
+    color: @color-theme;
+  }
+
+  &:active {
+    color: @color-red;
+  }
 
   @media (min-width: @min-md) {
     padding: 10px 20px;
