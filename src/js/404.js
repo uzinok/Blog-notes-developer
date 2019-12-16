@@ -1,29 +1,30 @@
 function cat() {
-    if (document.querySelector(".cat")) {
-        window.onmousemove = function (event) {
-            var eyeball = document.getElementsByClassName("eyeball");
-            x = event.pageX;
-            y = event.pageY;
-            for (var n = 0; n < 2; n++) {
-              getCoords(eyeball[n], x, y)
-            }
+  if (document.querySelector(".cat")) {
+    let eyeball = document.getElementsByClassName("eyeball"),
+      y_eyeball = [],
+      x_eyeball = [];
 
-            function getCoords(eyeball, x, y) {
-
-              var box = eyeball.getBoundingClientRect();
-              var y_eyeball = box.top + pageYOffset,
-                  x_eyeball = box.left + pageXOffset;
-              x = (x - x_eyeball) / 50;
-              y = (y - y_eyeball) / 50;
-            //   if (x >= 1) x = 0.9;
-            //   if (y >= 1) y = 0.9;
-            //   if (x <= -1) x = -0.9;
-            //   if (y <= -1) y = -0.9;
-              var translate = "translate(" + x + "px," + y + "px)";
-              eyeball.style.transform = translate;
-            };
-
-          }
+    for (let n = 0; n < 2; n++) {
+      let box = eyeball[n].getBoundingClientRect();
+      y_eyeball.push(box.top + pageYOffset),
+        x_eyeball.push(box.left + pageXOffset);
     }
-}
 
+    document.addEventListener("mousemove", function () {
+      for (let n = 0; n < 2; n++) {
+        setCoords(event, eyeball[n], x_eyeball[n], y_eyeball[n])
+      }
+    })
+
+
+    function setCoords(event, eyeball, x_eyeball, y_eyeball) {
+      x = event.pageX;
+      y = event.pageY;
+      x = (x - x_eyeball) / 40;
+      y = (y - y_eyeball) / 40;
+      let translate = "translate(" + x + "px," + y + "px)";
+      eyeball.style.transform = translate;
+      console.log(x_eyeball + " - " + y_eyeball)
+    };
+  }
+}

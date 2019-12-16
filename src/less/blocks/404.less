@@ -29,7 +29,7 @@
 
   &--right {
     right: 17px;
-    animation: eye 4s;
+    animation: animate-ear 4s;
     animation-iteration-count: infinite;
     transform-origin: center;
   }
@@ -46,15 +46,14 @@
 
   &--left {
     left: 50px;
-    animation: ear 7s;
+    animation: animate-eye 7s;
     animation-iteration-count: infinite;
     transform-origin: center;
   }
 
   &--right {
     right: 50px;
-    animation: ear 7s;
-    animation-delay: 300ms;
+    animation: animate-eye 7s;
     animation-iteration-count: infinite;
     transform-origin: center;
   }
@@ -110,8 +109,8 @@
 .mouth {
   width: 70px;
   height: 40px;
-  border: 2px solid transparent;
-  border-bottom: 4px solid #000000;
+  border: 3px solid transparent;
+  border-bottom: 4px solid #000000 !important;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -119,7 +118,7 @@
   transform: translateX(-50%);
 }
 
-@keyframes ear {
+@keyframes animate-eye {
   0% {
     transform: scale(1, 1);
   }
@@ -141,28 +140,39 @@
   }
 }
 
-@keyframes eye {
+@keyframes animate-ear {
   0% {
-    transform: scale(1, 1)  rotate(140deg);
+    transform: scale(1, 1) rotate(140deg);
   }
 
   36% {
-    transform: scale(1, 1)  rotate(140deg);
+    transform: scale(1, 1) rotate(140deg);
   }
 
   38% {
-    transform: scale(1, 0)  rotate(140deg);
+    transform: scale(1, 0) rotate(140deg);
   }
 
   42% {
-    transform: scale(1, 0)  rotate(140deg);
+    transform: scale(1, 0) rotate(140deg);
   }
 
   44% {
-    transform: scale(1, 1)  rotate(140deg);
+    transform: scale(1, 1) rotate(140deg);
   }
 
   100% {
-    transform: scale(1, 1)  rotate(140deg);
+    transform: scale(1, 1) rotate(140deg);
   }
+}
+
+.nose {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  border: 10px solid transparent;
+  border-top-color: #000;
+  border-left-color: #000;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 32% 45% 0% 45%;
 }
