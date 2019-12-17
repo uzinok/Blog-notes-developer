@@ -48,19 +48,44 @@ textarea {
   border: 1px solid @color-border-light;
   font-weight: 300;
   font-family: "Roboto", "Arial", sans-serif;
-  outline: 0;
   box-shadow: none;
+
+  &:hover {
+    border-color: darken(@color-border-light, 10%);
+  }
+
+  &:focus {
+    border-color: @color-theme;
+  }
 }
 
 input[type="submit"] {
   text-align: center;
-  background-color: #00aeef;
+  background-color: @color-theme;
   text-transform: uppercase;
-  border-bottom: 3px solid #0089bc;
+  border: none;
+  border-bottom: 3px solid darken(@color-theme, 10%);
   padding: 10px;
   color: #fff;
 
   @media(min-width: @min-sm) {
     letter-spacing: 5px;
+  }
+
+  &:hover {
+    border-bottom: 3px solid darken(@color-theme, 10%);
+    box-shadow: 3px 3px 3px 0 darken(@color-theme, 10%);
+  }
+
+  &:focus {
+    border: none;
+    border-bottom: 3px solid darken(@color-theme, 10%);
+    outline-color: @color-ouline;
+  }
+
+  &:active {
+    border: none;
+    box-shadow: none;
+    border-bottom: 3px solid transparent;
   }
 }

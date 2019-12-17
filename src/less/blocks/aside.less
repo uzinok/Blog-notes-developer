@@ -1,5 +1,17 @@
 .wrap--aside {
+  position: relative;
   display: block;
+  padding-top: 80px;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid @color-border-light;
+    position: absolute;
+    top: 40px;
+    left: 0;
+  }
 
   &>div {
     margin: 0 auto;
@@ -9,6 +21,11 @@
   @media (min-width: @min-md) {
     width: 250px;
     flex-shrink: 0;
+    padding-top: 0;
+
+    &:before {
+      display: none;
+    }
   }
 
   & ul {
@@ -43,6 +60,10 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #404040;
   text-align: center;
+
+  @media (min-width: @min-md) {
+    text-align: left;
+  }
 }
 
 .searchform {
@@ -75,12 +96,16 @@
 }
 
 .tagcloud {
+  text-align: center;
+
   & a {
     display: inline-block;
     margin: 0 10px 0 0;
     font-family: "Roboto Condensed", "Arial", sans-serif;
-    border-bottom: 1px solid #000;
     white-space: nowrap;
-    text-decoration: none;
+  }
+
+  @media (min-width: @min-md) {
+    text-align: left;
   }
 }
