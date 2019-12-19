@@ -24,7 +24,6 @@ function cat() {
       y = (y - y_eyeball) / 40;
       let translate = "translate(" + x + "px," + y + "px)";
       eyeball.style.transform = translate;
-      console.log(x_eyeball + " - " + y_eyeball)
     };
   }
 }
