@@ -1,7 +1,7 @@
 .comments-area {
   position: relative;
   width: 100%;
-  padding: 80px 15px 15px;
+  padding: 80px 0 15px;
   box-sizing: border-box;
 
   & p {
@@ -22,6 +22,39 @@
     top: 40px;
     left: 0;
   }
+}
+
+.comment {
+  margin-bottom: 1em;
+  border-bottom: 1px solid @color-border-light;
+}
+
+.comment-meta {
+  position: relative;
+}
+
+.avatar {
+  display: block;
+}
+
+.fn,
+.comment-metadata {
+  position: absolute;
+  left: 60px;
+}
+
+.fn {
+  top: 0;
+}
+
+.comment-metadata {
+  top: 32px;
+}
+
+.comment-awaiting-moderation {
+  display: inline-block;
+  padding: 0.5em 0 0;
+  font-size: 14px;
 }
 
 .required {
