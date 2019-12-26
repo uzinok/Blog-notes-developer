@@ -19,11 +19,11 @@ function setupVideo(video) {
     link.removeAttribute('href');
     video.classList.add('video--enabled');
     
-    video.addEventListener('click', () => {
+    video.addEventListener('click', function () {
         let iframe = createIframe(id);
 
-        link.remove();
-        button.remove();
+        link.style.display = "none";
+        button.style.display = "none";
         video.appendChild(iframe);
     });
 
