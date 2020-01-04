@@ -1,16 +1,16 @@
 aside.wrap.wrap--aside
   
   div
-    h2.widgettitle Поиск
+    p.widgettitle Поиск
 
     form#searchform.searchform(role="search" method="get" action="#")
       div
         label.screen-reader-text(for="s") Найти:
-        input#s(type="text" value="" name="s")
+        input#s(type="search" value="" name="s")
         input#searchsubmit(type="submit" value="Поиск")
 
   div
-    h2.widgettitle Календарь
+    p.widgettitle Календарь
     div#calendar_wrap.calendar_wrap
       table#wp-calendar
         caption Ноябрь 2019
@@ -75,7 +75,7 @@ aside.wrap.wrap--aside
               td.pad(colspan="1") &nbsp;
 
   div
-    h2.widgettitle Последние записи
+    p.widgettitle Последние записи
     ul
       li
         a(href="#") Слайдер-карусель на чистом JavaScript
@@ -89,7 +89,7 @@ aside.wrap.wrap--aside
         a(href="#") Карусель
 
   div
-    h2.widgettitle Облако меток
+    p.widgettitle Облако меток
     
     div.tagcloud
 
